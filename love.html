@@ -1,6 +1,9 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>给馨丹的一封信</title>	    
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>给蛋蛋的一封信</title>	
+        <link rel="shortcut icon" href="static/hearts.png">    
         <link type="text/css" rel="stylesheet" href="./file/default.css">
 		<script type="text/javascript" src="./file/jquery.min.js"></script>
 		<script type="text/javascript" src="./file/jscex.min.js"></script>
@@ -13,29 +16,51 @@
 		<script type="text/javascript" src="./file/love.js" charset="utf-8"></script>
 	    <style type="text/css">
         </style>
-</head>
+    </head>
 
     <body>
+        <img src="static/music-love.png" style="position: fixed;z-index: 10001;top:10px;right:10px;" onclick="let m = document.querySelector('.song-audio-autoplay'); if (m.paused ) {m.play(); this.className = 'rotateImages'} else {m.pause(); this.className = ''}">
+        <audio class="song-audio-autoplay" controls loop style="display: none;visibility: hidden">
+        <source src="m.mp3"></source>
+        Your browser isn't invited for super fun audio time.
+        </audio>
+        <style type="text/css">
+            .rotateImages{
+                -webkit-animation:myRotate 10s linear infinite;
+                animation:myRotate 10s linear infinite;
+            }
+            @-webkit-keyframes myRotate{
+                0%{ -webkit-transform: rotate(0deg);}
+                50%{ -webkit-transform: rotate(180deg);}
+                100%{ -webkit-transform: rotate(360deg);}
+            }
+            @keyframes myRotate{
+                0%{ -webkit-transform: rotate(0deg);}
+                50%{ -webkit-transform: rotate(180deg);}
+                100%{ -webkit-transform: rotate(360deg);}
+            }
+            
+        </style>
         
-        <audio src="m.mp3" style="width: 100px;height: 60px;" controls></audio>
-        <div style="text-align:center;">
-            <a href="index.html" style="color: #f5078a; font-size: 15px;font-family:华文行楷;">点我回到小心心哦！</a>
-        </div>  
+          
         <div id="main">
             <div id="error">本页面采用HTML5编辑，目前您的浏览器无法显示，请换成谷歌(<a href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a href="http://firefox.com.cn/download/">Firefox</a>)浏览器，或者其他游览器的最新版本。</div>
              <div id="wrap">
                 <div id="text">
-                    <div id="code" style="color: hsl(17, 94%, 49%);font-family: 楷体;font-weight: bolder;"><span class="say">亲爱的宝宝蛋，我爱你</span><br>
+                    <div id="code" style="color: black; line-height: 30px; text-shadow: 2px 2px 2px whitesmoke; font-family: 华文楷体;"><span class="say">亲爱的宝宝蛋，我爱你</span><br>
                       <span class="say"> 你知道你是我的宝贝蛋么</span><br>
                       <span class="say"> 你知道你有多么可爱美丽善良大方么</span><br>
                       <span class="say">你说我帅的一批，我不太相信</span><br>             
                           <span class="say"> 我觉得你比我美丽太多倍了，我爱你</span><br>
+                      <hr style="color: #3c0ab1ee;height: 2px;">
+            
                       <span class="say">因为我太爱你了，所以我害怕失去你</span><br>
-                      <span class="say">因为我太爱你了，所以我对你有时候也会说话着急</span><br>
+                      <span class="say">因为我太爱你了</span><br>
+                      <span class="say">所以我对你有时候也会说话着急</span><br>
                       <span class="say">希望可以执子之手，与子偕老</span><br>
-                      <span class="say">如果上天让我许三个愿望，</span><br>
-                              <span class="say">第一个是今生今世和你在一起， </span><br>
-                           <span class="say"> 第二个是再生再世和你在一起，</span><br>
+                      <span class="say">如果上天让我许三个愿望:</span><br>
+                              <span class="say">第一个是今生今世和你在一起 </span><br>
+                           <span class="say"> 第二个是再生再世和你在一起</span><br>
                            <span class="say">第三个是永生永世和你不分离!</span><br>
                            
                       <span class="say"><span class="space"></span> -- 爱丹的军营</span> 
@@ -44,11 +69,11 @@
                       </p>
                     </div>
                   </div>
-                <div id="clock-box">
+                <!-- <div id="clock-box">
                     <span class="STYLE1"></span><font color="#33CC00">亲爱的宝贝蛋，我们在一起</font>
 <span class="STYLE1">已经是……</span>
                   <div id="clock"></div>
-              </div>
+              </div> -->
                 <canvas id="canvas" width="1100" height="680"></canvas>
             </div>
             
@@ -168,7 +193,7 @@
 
             // 会有闪烁不得意这样做, (＞﹏＜)
             canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-            canvas.css("background", "#ffe");
+            canvas.css("background", "rgb(198, 221, 243)");
             $await(Jscex.Async.sleep(300));
             canvas.css("background", "none");
         }));
@@ -215,8 +240,7 @@
     </script>
     
 
-<div style="display:none">
-    <audio controls><source src="1.mp3" type="audio/mpeg"></audio></div>
+
 
 
 
